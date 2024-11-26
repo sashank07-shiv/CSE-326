@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online-Shopping Web</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid grey;
+            box-shadow: 2px 0px 5px grey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            background: cornflowerblue;
+        }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            padding: 10px 20px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .menu a:last-child {
+            background: black;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform-origin: center;
+            perspective: 1500px;
+            height: 1000px;
+            width: 1000px;
+        }
+
+        .left {
+            flex-basis: 100%;
+            animation: animate 3s linear infinite;
+        }
+
+        .left img {
+            width: 100%;
+            padding-top: 100px;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .right {
+            flex-basis: 50%;
+            max-width: 400px;
+            margin-left: 100px;
+        }
+
+        .right h1 {
+            font-size: 50px;
+            color: brown;
+        }
+
+        .right p {
+            font-size: 25px;
+            margin: 20px 0px;
+        }
+
+        button {
+            background: black;
+            color: white;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+
+        #featured {
+            padding: 50px 0px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            grid-auto-rows: minmax(200px, auto);
+            grid-gap: 1em;
+            justify-content: center;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .wrapper > div {
+            border: 1px solid grey;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper > div img {
+            width: 100%;
+        }
+
+        .box1 {
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+        }
+
+        .price {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: black;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .wrapper > div img:hover {
+            transform: scale(1.2);
+            transition: 0.4s linear;
+        }
+
+        #man {
+            padding: 80px 0px;
+        }
+
+        .man-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .man-box {
+            flex-basis: 15%;
+            box-shadow: 2px 3px 5px grey;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .man-box img {
+            width: 100%;
+            height: 50%;
+        }
+
+        .man-box h2 {
+            margin: 20px 0px;
+        }
+
+        .man-box h3 {
+            background: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .man-box:hover {
+            transform: translateY(-20px);
+            transition: 0.4s ease;
+        }
+
+        #women {
+            padding: 100px 0px;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: black;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <nav>
+            <div class="logo">Time Arrow</div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#featured">Featured</a>
+                <a href="#man">Man</a>
+                <a href="#women">Women</a>
+                <a href="#shop">Shop</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <img src="genai_m4_lla_vll_v3_upload_media_19001838_11_19_2024_03_15_52_604714_4283773260317379101.jpeg" alt="Festival Offer">
+            </div>
+            <div class="right">
+                <h1>Best Festival Offers</h1>
+                <p>We are providing the best quality materials. We have the best quality shoes for men and women.</p>
+                <p>"Elevate your wrist game. Explore luxury and everyday watches"</p>
+                <p>50% Discount!!!</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </header>
+    <section id="featured">
+        <h1>Featured</h1>
+        <div class="wrapper">
+            <div class="box1">
+                <img src="images (1).jpg" alt="Featured Product 1">
+                <div class="price">Price: 5999/-</div>
+            </div>
+            <div>
+                <img src="images (2).jpg" alt="Featured Product 2">
+                <div class="price">Price: 4499/-</div>
+            </div>
+            <div>
+                <img src="images (3).jpg" alt="Featured Product 3">
+                <div class="price">Price: 2499/-</div>
+            </div>
+            <div>
+                <img src="images (4).jpg" alt="Featured Product 4">
+                <div class="price">Price: 3999/-</div>
+            </div>
+            <div>
+                <img src="images.jpg" alt="Featured Product 5">
+                <div class="price">Price: 4999/-</div>
+            </div>
+        </div>
+    </section>
+    <section id="man">
+        <div class="man-row">
+            <div class="man-box">
+                <img src="smart watch.jpg" alt="Smart Watch">
+                <h2>Smart Watch<br>3999/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="analog watch.avif" alt="Analog Classic">
+                <h2>Analog Classic<br>2499/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="tour billion watch.webp" alt="Tourbillion Watch">
+                <h2>Tourbillion Watch<br>2999/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="download (4).jpg" alt="Leather Watch">
+                <h2>Leather Watch<br>3499/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="casio watch.jpg" alt="Casio Watch">
+                <h2>Casio Watch<br>1999/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+        </div>
+    </section>
+    <section id="women">
+        <div class="man-row">
+            <div class="man-box">
+                <img src="analog watch for women.avif" alt="Analog Watch for Women">
+                <h2>Analog Watch for Women<br>2499/-</h2>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="analog watch.avif" alt="Skeleton Watch for Women">
+                <h2>Skeleton Watch for Women<br>1999/-</h3>
+                <h3>Add to cart</h3>
+            </div>
+            <div class="man-box">
+                <img src="smart watch.jpg" alt="Smart Watch for Women">
+                <h2>Smart Watch for Women<br>3499/-</h2> 
+                <h3>Add to cart</h3> </div>
+                 <div class="man-box">
+                     <img src="download (4).jpg" alt="Classic Watch"> 
+                     <h2>Classic Watch<br>2599/-</h2> 
+                     <h3>Add to cart</h3> </div> </div> </section> 
+                     <section id="footer"> <h2>Developed by Sashank Manohar</h2>
+                     </section>
+                     </body> 
+                     </html>
